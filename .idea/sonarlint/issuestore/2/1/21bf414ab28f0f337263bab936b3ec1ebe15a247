@@ -1,0 +1,7 @@
+
+C
+java:S1481"(Remove this unused "ext" local variable.(¹øÄ‚øÿÿÿÿ
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(¢ÔÆ¸þÿÿÿÿ
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(Á»¦ºýÿÿÿÿ
+I
+java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ
