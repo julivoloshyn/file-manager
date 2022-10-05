@@ -18,9 +18,7 @@ public class LstreeTest {
 
         List<String> args = new ArrayList<>();
 
-        assertEquals(
-                "You need to enter a depth",
-                lsTree.execute(args));
+        assertEquals("You need to enter a depth", lsTree.execute(args));
     }
 
     @Test
@@ -31,9 +29,7 @@ public class LstreeTest {
         List<String> args = new ArrayList<>();
         args.add("-1");
 
-        assertEquals(
-                "Depth can not be negative",
-                lsTree.execute(args));
+        assertEquals("Depth can not be negative", lsTree.execute(args));
     }
 
     @Test
@@ -44,9 +40,7 @@ public class LstreeTest {
         List<String> args = new ArrayList<>();
         args.add("0");
 
-        assertEquals(
-                "Depth can not be negative",
-                lsTree.execute(args));
+        assertEquals("Depth can not be negative", lsTree.execute(args));
     }
 
     @Test
@@ -57,9 +51,7 @@ public class LstreeTest {
         List<String> args = new ArrayList<>();
         args.add("hello");
 
-        assertEquals(
-                "Enter a number",
-                lsTree.execute(args));
+        assertEquals("Enter a number", lsTree.execute(args));
     }
 
     @Test
@@ -70,9 +62,7 @@ public class LstreeTest {
         List<String> args = new ArrayList<>();
         args.add("6-32j");
 
-        assertEquals(
-                "Enter a number",
-                lsTree.execute(args));
+        assertEquals("Enter a number", lsTree.execute(args));
     }
 
 }

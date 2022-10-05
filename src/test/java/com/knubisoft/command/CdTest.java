@@ -18,9 +18,7 @@ public class CdTest {
 
         List<String> args = new ArrayList<>();
         args.add("..");
-        assertEquals(
-                "C:\\xamp",
-                cd.execute(args));
+        assertEquals("C:\\xamp", cd.execute(args));
     }
 
     @Test
@@ -30,9 +28,7 @@ public class CdTest {
 
         List<String> args = new ArrayList<>();
         args.add("dir");
-        assertEquals(
-                "C:\\xamp\\dir",
-                cd.execute(args));
+        assertEquals("C:\\xamp\\dir", cd.execute(args));
     }
 
     @Test
@@ -46,9 +42,7 @@ public class CdTest {
                 cd.execute(args));
 
         args.add("k");
-        assertEquals(
-                "C:\\xamp\\dir",
-                cd.execute(args));
+        assertEquals("C:\\xamp\\dir", cd.execute(args));
     }
 
 }
