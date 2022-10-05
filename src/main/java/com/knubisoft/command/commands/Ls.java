@@ -21,15 +21,28 @@ public class Ls extends Command {
 
     @Override
     public String execute(List<String> args) {
-        if (context.getCurrentDirectory().listFiles().length == 0) {
-            return "Directory " + context.getCurrentDirectory() + " is empty";
+        String check = checkForException(args);
+        if (check != null) {
+            return check;
         }
+
         args = args.isEmpty() ? args : Arrays.asList(args.get(0).split(""));
+
         List<List<String>> result = new ArrayList<>();
         result.add(createHeaders(args));
         result.addAll(createBody(args));
         printTable(result, getPreCalculatedStringFormat(result));
         return "";
+    }
+
+    private String checkForException(List<String> args) {
+        try {
+            context.getCurrentDirectory().listFiles();
+            createBody(args);
+        } catch (NullPointerException e){
+            return "Directory " + context.getCurrentDirectory() + " is empty";
+        }
+        return null;
     }
 
     private void printTable(List<List<String>> result, String format) {

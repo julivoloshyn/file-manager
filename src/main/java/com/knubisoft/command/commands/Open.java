@@ -26,12 +26,11 @@ public class Open extends Command {
             String dirName = context.getCurrentDirectory().getAbsolutePath() + "/";
             String line = args.get(0);
             File file = new File(dirName, line);
-            String ext = Files.getFileExtension(line);
 
             if (file.exists()) {
                 System.out.println(FileUtils.readFileToString(new File(dirName, line), StandardCharsets.UTF_8));
             } else {
-                System.out.println("File does not exists in this directory");
+                return "File does not exists in this directory";
             }
         }
         return "";

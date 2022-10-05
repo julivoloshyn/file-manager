@@ -15,13 +15,33 @@ public class LsTree extends Command {
     @Override
     public String execute(List<String> args) {
         if(args.isEmpty()){
-            System.out.println("You need to enter a depth");
+            return "You need to enter a depth";
         }
+
+        String check = intCheck(args);
+        if (check != null) {
+            return check;
+        }
+
         File directory = context.getCurrentDirectory();
         int indent = 0;
         StringBuilder sb = new StringBuilder();
         printDirectoryTree(args, directory, indent, sb, 0);
         return sb.toString();
+    }
+
+    private String intCheck(List<String> args) {
+
+        try {
+            Integer.parseInt(args.get(0));
+        } catch (NumberFormatException e){
+            return "Enter a number";
+        }
+
+        if(Integer.parseInt(args.get(0)) <= 0){
+            return "Depth can not be negative";
+        }
+        return null;
     }
 
     private static void printDirectoryTree(List<String> args, File directory, int indent,
@@ -57,4 +77,5 @@ public class LsTree extends Command {
     private static String getIndentString(int indent) {
         return "|  ".repeat(Math.max(0, indent));
     }
+
 }

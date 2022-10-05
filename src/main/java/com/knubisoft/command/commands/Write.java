@@ -29,7 +29,7 @@ public class Write extends Command {
 
             writeToFile(line);
         } else{
-            System.out.println("Go to .txt file");
+            return "Go to .txt file";
         }
 
         return "";
