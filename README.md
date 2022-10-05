@@ -12,6 +12,6 @@ Project created with:
 * Java version: 1.8
 * Maven version: 3.0
 
-##Usage
+## Usage
 
 There are some helpful commands. For example, command 'help' will give you a list of available operations. Command 'pwd' shows in what directory/file is the program in
