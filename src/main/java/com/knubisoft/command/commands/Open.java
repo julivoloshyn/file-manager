@@ -1,6 +1,5 @@
 package com.knubisoft.command.commands;
 
-import com.google.common.io.Files;
 import com.knubisoft.command.Command;
 import com.knubisoft.command.Context;
 import lombok.SneakyThrows;
@@ -10,12 +9,27 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
+/**
+ * Command 'open' opens for reading chosen file.
+ *
+ * Example:
+ *
+ *     path = "C:\\xamp\\dir"
+ *
+ *     input: open file.txt
+ *     result: "hello"
+ */
 public class Open extends Command {
 
     public Open(Context context) {
         super(context);
     }
 
+    /**
+     * Checks for an empty arguments and a case if a directory name is not exists. Prints a text from file.
+     *
+     * @param args Arguments which are written after the command.
+     */
     @SneakyThrows
     @Override
     public String execute(List<String> args) {

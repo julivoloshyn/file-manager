@@ -8,12 +8,27 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.util.List;
 
+/**
+ * Command 'mkdir' creates a new directory.
+ *
+ * Example:
+ *
+ *     path = "C:\\xamp\\dir"
+ *
+ *     input: mkdir newdir
+ *     result: "C:\\xamp\\dir\\newdir"
+ */
 public class Mkdir extends Command {
 
     public Mkdir(Context context) {
         super(context);
     }
 
+    /**
+     * Checks for an empty arguments and a case if a directory name is exists. Creates new directory.
+     *
+     * @param args Arguments which are written after the command.
+     */
     @SneakyThrows
     @Override
     public String execute(List<String> args) {

@@ -7,12 +7,21 @@ import org.apache.commons.io.FilenameUtils;
 import java.io.File;
 import java.util.List;
 
+/**
+ * Command 'lsall' returns a table of files/directories which located in current directory by given
+ * parameters: 's, r, w, e' (size, readable, writable, extension).
+ */
 public class LsAll extends Command {
 
     public LsAll(Context context) {
         super(context);
     }
 
+    /**
+     * Builds a full table using formatter.
+     *
+     * @param args Arguments which are written after the command.
+     */
     @Override
     public String execute(List<String> args) {
         File file = context.getCurrentDirectory();

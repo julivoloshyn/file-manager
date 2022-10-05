@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class RmrTest {
 
@@ -19,7 +18,7 @@ public class RmrTest {
 
         List<String> args = new ArrayList<>();
 
-        assertEquals("Incorrect argument. Enter file/directory name to delete", rmr.execute(args));
+        assertEquals("Incorrect argument. Enter directory name to delete", rmr.execute(args));
     }
 
     @Test
@@ -30,7 +29,6 @@ public class RmrTest {
         List<String> args = new ArrayList<>();
         args.add("file.txt");
 
-        rmr.execute(args);
-        assertFalse(new File("C:\\xamp\\dir\\l").exists());
+        assertEquals("Directory was successfully deleted", rmr.execute(args));
     }
 }

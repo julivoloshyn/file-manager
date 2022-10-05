@@ -18,7 +18,7 @@ public class RmTest {
         Rm rm = new Rm(context);
         List<String> args = new ArrayList<>();
 
-        assertEquals("Incorrect argument. Enter file/directory name to delete", rm.execute(args));
+        assertEquals("Incorrect argument. Enter file name to delete", rm.execute(args));
     }
 
     @Test
@@ -29,7 +29,6 @@ public class RmTest {
         List<String> args = new ArrayList<>();
         args.add("file.txt");
 
-        rm.execute(args);
-        assertFalse(new File("C:\\xamp\\dir\\file.txt").exists());
+        assertEquals("File was successfully deleted", rm.execute(args));
     }
 }

@@ -21,6 +21,12 @@ public class Main {
         performCommands(context, commands);
     }
 
+    /**
+     * Checks commands to perform an action.
+     *
+     * @param context Context.
+     * @param commands Map of available commands.
+     */
     private static void performCommands(Context context, Map<String, Command> commands) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -48,6 +54,11 @@ public class Main {
         }
     }
 
+    /**
+     * Gets all available commands from classes.
+     *
+     * @param context Context.
+     */
     @SneakyThrows
     private static Map<String, Command> getCommands(Context context) {
         Reflections reflection = new Reflections("com.knubisoft.command", Scanners.SubTypes);
