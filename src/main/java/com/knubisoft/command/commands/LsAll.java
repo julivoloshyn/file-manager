@@ -1,9 +1,7 @@
 package com.knubisoft.command.commands;
 
-import com.google.common.io.Files;
 import com.knubisoft.command.Command;
 import com.knubisoft.command.Context;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 
 import java.io.File;

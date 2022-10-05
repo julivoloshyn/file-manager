@@ -14,6 +14,9 @@ public class LsTree extends Command {
 
     @Override
     public String execute(List<String> args) {
+        if(args.isEmpty()){
+            System.out.println("You need to enter a depth");
+        }
         File directory = context.getCurrentDirectory();
         int indent = 0;
         StringBuilder sb = new StringBuilder();

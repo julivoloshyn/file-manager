@@ -9,7 +9,6 @@ import org.apache.commons.io.FileUtils;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
-import java.util.Scanner;
 
 public class Open extends Command {
 

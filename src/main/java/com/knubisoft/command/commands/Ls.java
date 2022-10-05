@@ -21,7 +21,7 @@ public class Ls extends Command {
 
     @Override
     public String execute(List<String> args) {
-        if (context.getCurrentDirectory().listFiles().length==0) {
+        if (context.getCurrentDirectory().listFiles().length == 0) {
             return "Directory " + context.getCurrentDirectory() + " is empty";
         }
         args = args.isEmpty() ? args : Arrays.asList(args.get(0).split(""));
